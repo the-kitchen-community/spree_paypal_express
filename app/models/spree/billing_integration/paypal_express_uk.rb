@@ -1,4 +1,5 @@
-class Spree::BillingIntegration::PaypalExpressUk < Spree::BillingIntegration
+module Spree
+class BillingIntegration::PaypalExpressUk < Spree::BillingIntegration
   preference :login, :string
   preference :password, :password
   preference :signature, :string
@@ -9,4 +10,5 @@ class Spree::BillingIntegration::PaypalExpressUk < Spree::BillingIntegration
     ActiveMerchant::Billing::PaypalExpressUkGateway
   end
 
+end
 end

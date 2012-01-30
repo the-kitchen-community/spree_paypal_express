@@ -1,4 +1,5 @@
-class Spree::PaypalAccount < ActiveRecord::Base
+module Spree
+  class PaypalAccount < ActiveRecord::Base
   has_many :payments, :as => :source
 
   def actions
@@ -101,4 +102,5 @@ class Spree::PaypalAccount < ActiveRecord::Base
     def amount_in_cents(amount)
       (100 * amount).to_i
     end
+end
 end
